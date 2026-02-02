@@ -2,8 +2,8 @@
 
 namespace Okeonline\FilamentArchivable\Tables\Actions;
 
+use Filament\Actions\Action;
 use Filament\Actions\Concerns\CanCustomizeProcess;
-use Filament\Tables\Actions\Action;
 use Illuminate\Database\Eloquent\Model;
 
 class UnArchiveAction extends Action
