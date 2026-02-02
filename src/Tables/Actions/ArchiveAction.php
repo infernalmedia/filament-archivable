@@ -23,7 +23,7 @@ class ArchiveAction extends Action
 
         $this->modalHeading(fn (): string => __('filament-archivable::table.actions.archive.single.modal.heading', ['label' => $this->getRecordTitle()]));
 
-        $this->modalSubmitActionLabel(__('filament-archivable::table.actions.single.modal.actions.archive.label'));
+        $this->modalSubmitActionLabel(__('filament-archivable::table.actions.archive.single.modal.actions.archive.label'));
 
         $this->successNotificationTitle(__('filament-archivable::table.actions.archive.single.notifications.archived.title'));
 
