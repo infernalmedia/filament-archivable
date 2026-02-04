@@ -4,8 +4,8 @@ namespace Okeonline\FilamentArchivable\Tests\TestResources;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Okeonline\FilamentArchivable\Tables\Actions\ArchiveAction;
@@ -20,7 +20,7 @@ class ModelWithArchivableTraitAndFalseCustomClassesResource extends Resource
 
     public static ?string $modelLabel = 'with-classes';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $form): Schema
     {
         return $form
             ->schema([
