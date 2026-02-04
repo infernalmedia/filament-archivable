@@ -2,23 +2,10 @@
 
 namespace Okeonline\FilamentArchivable\Tests;
 
-use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
-use BladeUI\Icons\BladeIconsServiceProvider;
-use Filament\Actions\ActionsServiceProvider;
 use Filament\Facades\Filament;
-use Filament\FilamentServiceProvider;
-use Filament\Forms\FormsServiceProvider;
-use Filament\Infolists\InfolistsServiceProvider;
-use Filament\Notifications\NotificationsServiceProvider;
-use Filament\Support\SupportServiceProvider;
-use Filament\Tables\TablesServiceProvider;
-use Filament\Widgets\WidgetsServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
-use Livewire\LivewireServiceProvider;
-use Okeonline\FilamentArchivable\FilamentArchivableServiceProvider;
 use Okeonline\FilamentArchivable\Tests\TestModels\User;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -36,20 +23,21 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            ActionsServiceProvider::class,
-            BladeCaptureDirectiveServiceProvider::class,
-            BladeHeroiconsServiceProvider::class,
-            BladeIconsServiceProvider::class,
-            FilamentServiceProvider::class,
-            FormsServiceProvider::class,
-            InfolistsServiceProvider::class,
-            LivewireServiceProvider::class,
-            NotificationsServiceProvider::class,
-            SupportServiceProvider::class,
-            TablesServiceProvider::class,
-            WidgetsServiceProvider::class,
-            PanelProvider::class,
-            FilamentArchivableServiceProvider::class,
+            \BladeUI\Heroicons\BladeHeroiconsServiceProvider::class,
+            \BladeUI\Icons\BladeIconsServiceProvider::class,
+            \Filament\Actions\ActionsServiceProvider::class,
+            \Filament\FilamentServiceProvider::class,
+            \Filament\Forms\FormsServiceProvider::class,
+            \Filament\Infolists\InfolistsServiceProvider::class,
+            \Filament\Notifications\NotificationsServiceProvider::class,
+            \Filament\Schemas\SchemasServiceProvider::class,
+            \Filament\Support\SupportServiceProvider::class,
+            \Filament\Tables\TablesServiceProvider::class,
+            \Filament\Widgets\WidgetsServiceProvider::class,
+            \Livewire\LivewireServiceProvider::class,
+            \Okeonline\FilamentArchivable\FilamentArchivableServiceProvider::class,
+            \Okeonline\FilamentArchivable\Tests\PanelProvider::class,
+            \RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider::class,
         ];
     }
 
